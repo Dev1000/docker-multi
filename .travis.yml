@@ -16,7 +16,7 @@ after_success:
   - docker build -t dev1000/multi-server ./server
   - docker build -t dev1000/multi-worker ./worker
 
-  # Log in to the docker CLI change username
+  # Log in to the docker CLI change scape char in password
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # Take those images and push them to docker hub
